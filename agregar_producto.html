@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Producto</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e0f7fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        h2 {
+            color: #00796b;
+            margin-bottom: 20px;
+        }
+        form {
+            background-color: #ffffff;
+            padding: 60px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 320px;
+        }
+        input, textarea, button {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #b0bec5;
+            border-radius: 5px;
+        }
+        input:focus, textarea:focus {
+            border-color: #4db6ac;
+            outline: none;
+        }
+        button {
+            background-color: #00796b;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #004d40;
+        }
+    </style>
+</head>
+<body>
+    <h2>Agregar Nuevo Producto</h2>
+    <form action="agregar_producto.php" method="POST" enctype="multipart/form-data">
+        <input type="text" name="nombre" placeholder="Nombre del producto" required><br>
+        <textarea name="descripcion" placeholder="Descripción" required></textarea><br>
+        <input type="number" name="precio" placeholder="Precio" step="0.01" required><br>
+        <input type="number" name="stock" placeholder="Stock disponible" required><br>
+        <input type="file" name="imagen" accept="image/*" required><br>
+        <button type="submit">Agregar Producto</button>
+    </form>
+</body>
+</html>
